@@ -16,7 +16,6 @@ class CampaignsController < ApplicationController
   end
 
   def show
-
   end
 
   private
