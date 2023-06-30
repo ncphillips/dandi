@@ -24,7 +24,7 @@ jobs:
           POSTGRES_PASSWORD: postgres
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://postgres:postgres@localhost:5432/bjj_rolls_test"
+      DATABASE_URL: "postgres://postgres:postgres@localhost:5555/bjj_rolls_test"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
