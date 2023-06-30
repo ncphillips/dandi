@@ -1,6 +1,7 @@
-<div id="<%= dom_id campaign %>">
+<div id="<%= dom_id campaign %>" class="card p-3 stack vertical gap-3 w-full max-">
   <h2 class="heading lg"><%= campaign.title %></h2>
   <p>
     <%= campaign.description %>
   </p>
+  <%= link_to "Join the game", campaign_path(campaign), class: "btn secondary sm", data: { turbo: false } %>
 </div>
