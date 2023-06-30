@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "aliariff.vscode-erb-beautify",
+    "rebornix.ruby",
+    "castwide.solargraph",
+    "testdouble.vscode-standard-ruby",
+    "bradlc.vscode-tailwindcss",
+    "thadeu.vscode-run-rspec-file",
+    "wingrunr21.vscode-ruby"
+  ]
+}
