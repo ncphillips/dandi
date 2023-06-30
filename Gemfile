@@ -76,6 +76,8 @@ group :test do
   gem "webdrivers"
 end
 
+gem "tailwindcss-rails", "~> 2.0"
+
 gem "dockerfile-rails", ">= 1.5", :group => :development
 
 gem "pg", "~> 1.5"
