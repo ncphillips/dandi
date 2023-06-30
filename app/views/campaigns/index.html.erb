@@ -1,0 +1,8 @@
+<h1>Campaigns</h1>
+<%= turbo_frame_tag "campaigns" do %>
+  <div class="page-block stack vertical gap-4">
+    <% if @campaigns.empty? %>
+      <p>You aren't in any campaigns yet.</p>
+    <% end %>
+  </div>
+<% end %>
