@@ -9,5 +9,6 @@
   <%= turbo_frame_tag "new-campaign" do %>
     <%= link_to "New campaign", new_campaign_path, class: "btn primary md" %>
   <% end %>
+  <%= turbo_stream_from :campaigns %>
   <%= turbo_frame_tag "campaigns", src: campaigns_path %>
 </section>

@@ -10,9 +10,16 @@ class CampaignsController < ApplicationController
   end
 
   def create
-    Campaign.create(params.require(:campaign).permit(:title, :description))
+    @campaign = Campaign.create(params.require(:campaign).permit(:title, :description))
 
-    redirect_to campaigns_path
+    respond_to do |format|
+      format.turbo_stream do
+        redirect_to new_campaign_path
+      end
+      format.html do
+        redirect_to campaigns_path
+      end
+    end
   end
 
   def show

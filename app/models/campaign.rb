@@ -9,4 +9,5 @@
 #  updated_at  :datetime         not null
 #
 class Campaign < ApplicationRecord
+  broadcasts_to ->(campaign) { :campaigns }, inserts_by: :prepend, target: "campaigns"
 end
