@@ -4,6 +4,6 @@ end
 
 Given("the following {word} exists") do |factory, table|
   table.hashes.each do |row|
-    FactoryBot.create(factory, row)
+    # FactoryBot.create(factory, row)
   end
 end

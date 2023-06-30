@@ -1,4 +1,10 @@
 <div class="page-block text-center">
   <h1 class="heading xxl">Dandi</h1>
 </div>
-<%= turbo_frame_tag "campaigns", src: campaigns_path %>
+<%= turbo_frame_tag "new-campaign" do %>
+  <%= link_to "New campaign", new_campaign_path, class: "btn primary md" %>
+<% end %>
+<sectoin class="page-block stack vertical">
+  <h2 class="heading xl">Campaigns</h2>
+  <%= turbo_frame_tag "campaigns", src: campaigns_path %>
+</section>

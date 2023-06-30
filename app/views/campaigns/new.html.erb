@@ -1,0 +1,28 @@
+<div class="page-block stack gap-5 vertical">
+  <h1 class="heading xxl">New campaign</h1>
+  <%= turbo_frame_tag "new-campaign" do %>
+    <%= form_with(model: @campaign, local: true, class: "card p-4 stack vertical gap-4") do |form| %>
+      <% if @campaign.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@campaign.errors.count, "error") %> prohibited this campaign from being saved:</h2>
+          <ul>
+            <% @campaign.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="field">
+        <%= form.label :title %>
+        <%= form.text_field :title, id: :campaign_title, class: "input" %>
+      </div>
+      <div class="field">
+        <%= form.label :description %>
+        <%= form.text_area :description, id: :campaign_description, class: "input" %>
+      </div>
+      <div class="actions">
+        <%= form.submit id: "create-campaign", class: "btn primary md" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
