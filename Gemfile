@@ -37,7 +37,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -54,7 +54,7 @@ group :development, :test do
   gem "rspec-rails", "~> 6.0.3"
   gem "factory_bot_rails"
   gem "faker"
-  gem "standard" 
+  gem "standard"
 end
 
 group :development do
@@ -64,21 +64,20 @@ group :development do
   gem "bundler-audit"
   gem "brakeman"
   gem "htmlbeautifier"
-  gem "web-console"
   gem "letter_opener"
 end
 
 group :test do
   gem "database_cleaner"
   gem "capybara"
-  gem 'cucumber-rails', require: false
+  gem "cucumber-rails", require: false
   gem "selenium-webdriver"
   gem "webdrivers"
 end
 
 gem "tailwindcss-rails", "~> 2.0"
 
-gem "dockerfile-rails", ">= 1.5", :group => :development
+gem "dockerfile-rails", ">= 1.5", group: :development
 
 gem "pg", "~> 1.5"
 
