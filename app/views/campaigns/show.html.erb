@@ -1,3 +1,4 @@
 <div class="page-block">
   <h1 class="heading xxl"><%= @campaign.title %></h1>
+  <%= button_to "Destroy", campaign_path(@campaign), method: :delete, class: "btn secondary md" %>
 </div>
