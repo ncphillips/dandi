@@ -10,4 +10,6 @@
 #
 class Campaign < ApplicationRecord
   broadcasts_to ->(campaign) { :campaigns }, inserts_by: :prepend, target: "campaigns"
+
+  has_many :messages, dependent: :destroy
 end

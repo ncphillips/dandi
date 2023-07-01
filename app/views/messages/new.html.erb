@@ -1,0 +1,26 @@
+<div class="page-block stack gap-5 vertical">
+  <h1 class="heading xxl">New message</h1>
+  <div class="card p-4">
+    <%= turbo_frame_tag "new-message" do %>
+      <%= form_with(model: @message, local: true, class: "stack vertical gap-4") do |form| %>
+        <% if @message.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+            <ul>
+              <% @message.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="field">
+          <%= form.text_area :content, id: :campaign_title, class: "input" %>
+        </div>
+        <%= form.hidden_field :campaign_id, value: @message.campaign_id %>
+        <div class="actions">
+          <%= form.submit id: "create-message", class: "btn primary md" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

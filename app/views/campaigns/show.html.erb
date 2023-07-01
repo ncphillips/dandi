@@ -1,4 +1,8 @@
 <div class="page-block">
   <h1 class="heading xxl"><%= @campaign.title %></h1>
   <%= button_to "Destroy", campaign_path(@campaign), method: :delete, class: "btn secondary md" %>
+  <h2 class="heading lg">Campaign Chat</h2>
+  <%= turbo_stream_from @campaign %>
+  <%= turbo_frame_tag "messages", src: campaign_messages_path(@campaign) %>
+  <%= turbo_frame_tag "new-message", src: new_campaign_message_path(@campaign) %>
 </div>
